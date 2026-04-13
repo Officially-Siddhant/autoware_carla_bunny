@@ -1,15 +1,15 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>carla_audi_etron_sensor_kit_launch</name>
+  <name>carla_bunny_sensor_kit_launch</name>
   <version>0.1.0</version>
-  <description>The carla_audi_etron_sensor_kit_launch package</description>
-  <maintainer email="gemb.kaljavesi@tum.de">Gemb Kaljavesi</maintainer>
+  <description>The carla_bunny_sensor_kit_launch package</description>
+  <maintainer email="swarajgajare@gmail.com">Swaraj Gajare</maintainer>
   <license>LGPLv3</license>
 
   <buildtool_depend>ament_cmake_auto</buildtool_depend>
 
-  <exec_depend>carla_audi_etron_common_sensor_launch</exec_depend>
+  <exec_depend>carla_bunny_common_sensor_launch</exec_depend>
   <exec_depend>gnss_poser</exec_depend>
   <exec_depend>pointcloud_preprocessor</exec_depend>
   <exec_depend>tamagawa_imu_driver</exec_depend>
