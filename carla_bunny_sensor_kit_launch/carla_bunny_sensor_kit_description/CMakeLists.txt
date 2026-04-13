@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(carla_audi_etron_sensor_kit_description)
+project(carla_bunny_sensor_kit_description)
 
 find_package(ament_cmake_auto REQUIRED)
 
