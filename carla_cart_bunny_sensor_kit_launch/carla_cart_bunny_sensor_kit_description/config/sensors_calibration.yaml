@@ -1,0 +1,9 @@
+# This file contains the calibration parameters for the sensor kit.it defines where the sensor kit as a whole is mounted on your vehicle, relative to base_link (the vehicle's center/reference point).
+base_link:
+  sensor_kit_base_link:
+    x: 1.3855 # measure from your buggy's base_link to where the sensor kit is mounted (forward distance in meters)
+    y: 0.0 # keep 0 if sensor kit is centered left-right
+    z: 0.0 # keep 0 if no height offset from base_link
+    roll: 0
+    pitch: 0
+    yaw: 0

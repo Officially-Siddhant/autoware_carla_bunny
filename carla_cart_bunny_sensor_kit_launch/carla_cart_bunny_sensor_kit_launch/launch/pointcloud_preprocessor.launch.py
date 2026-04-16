@@ -63,7 +63,7 @@ def generate_launch_description():
     def add_launch_arg(name: str, default_value=None):
         launch_arguments.append(DeclareLaunchArgument(name, default_value=default_value))
 
-    carla_audi_etron_kit_launch_share_dir = get_package_share_directory("carla_audi_etron_sensor_kit_launch")
+    carla_cart_bunny_sensor_kit_launch_share_dir = get_package_share_directory("carla_cart_bunny_sensor_kit_launch")
 
     add_launch_arg("base_frame", "base_link")
     add_launch_arg("use_multithread", "False")
@@ -73,7 +73,7 @@ def generate_launch_description():
     add_launch_arg(
         "concatenate_and_time_sync_node_param_path",
         os.path.join(
-            carla_audi_etron_kit_launch_share_dir,
+            carla_cart_bunny_sensor_kit_launch_share_dir,
             "config",
             "concatenate_and_time_sync_node.param.yaml",
         ),

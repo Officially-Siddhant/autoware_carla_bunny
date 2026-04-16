@@ -1,4 +1,4 @@
-# Copyright 2023 Gemb Kaljavesi, Technical University of Munich
+# Copyright 2026 ASAS Labs.
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU Lesser General Public License as published by
@@ -155,7 +155,7 @@ def generate_launch_description():
     add_launch_arg("use_multithread", "False", "use multithread")
     add_launch_arg("use_intra_process", "False", "use ROS2 component container communication")
     add_launch_arg("use_pointcloud_container", "false")
-    add_launch_arg("container_name", "velodyne_node_container")
+    # add_launch_arg("container_name", "velodyne_composable_node_container")
 
     set_container_executable = SetLaunchConfiguration(
         "container_executable",

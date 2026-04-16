@@ -1,3 +1,4 @@
+# Sensor kit calibration parameters for the sensor kit mounted on the vehicle. This file defines the position and orientation of each sensor relative to the base link of the vehicle.
 sensor_kit_base_link:
   traffic_light_left_camera/camera_link:
     x: 1.80

@@ -1,0 +1,25 @@
+<!-- We have a more robust setup in terms of parametrization for multiple cameras to be launched  -->
+<launch>
+  <arg name="launch_driver" default="true"/>
+  <arg name="camera_name" default="camera1"/>
+  <arg name="camera_input_topic" default="/sensor/camera/front"/>
+
+  <group>
+    <push-ros-namespace namespace="camera"/>
+    <group>
+      <push-ros-namespace namespace="$(var camera_name)"/>
+      
+      <node pkg="topic_tools" exec="relay" name="tl_camera_info_relay_$(var camera_name)" output="log">
+        <param name="input_topic" value="$(var camera_input_topic)/camera_info"/>
+        <param name="output_topic" value="camera_info"/> <param name="type" value="sensor_msgs/msg/CameraInfo"/>
+        <param name="reliability" value="best_effort"/>
+      </node>
+
+      <node pkg="topic_tools" exec="relay" name="tl_compressed_image_relay_$(var camera_name)" output="log">
+        <param name="input_topic" value="$(var camera_input_topic)/image"/>
+        <param name="output_topic" value="image_raw/compressed"/> <param name="type" value="sensor_msgs/msg/CompressedImage"/>
+        <param name="reliability" value="best_effort"/>
+      </node>
+    </group>
+  </group>
+</launch>
